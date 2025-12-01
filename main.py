@@ -67,7 +67,7 @@ def signin():
     else:
         return jsonify({"message": "Invalid credentials"}), 401
 
-# Prediction endpoint
+# Prediction Endpoint
 @app.route("/prediction", methods=["POST"])
 def prediction():
     data = request.json
@@ -87,3 +87,4 @@ def prediction():
 if __name__=='__main__':
     app.run(debug=True, port=8000)
     conn.close()
+
